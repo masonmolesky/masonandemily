@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Mason & Emily are getting married!</title>
+    <link rel="icon" type="image/png" href="/photos/Molesky.ico">
+
+    <!-- Include CryptoJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+</head>
+
+<body class="alt">
+    <nav id="nav">
+        <div class="logo"><a href="#"><img src="img/M & Em_transparent heart red.png" alt="Logo"></a></div>
+
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ourstory.html">Our Story</a></li>
+            <li><a href="/venue.html">Venue</a></li>
+            <li><a href="/pictures.html">Pictures</a></li>
+            <li><a href="/rsvp.html">RSVP</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div id="page" class="container">
+            <div id="content">
+                <div class="title">
+                    <h2>MASON & EMILY</h2>
+                    <span class="byline">10.05.25</span>
+                </div>
+                <p><img src="/photos/headshot2.jpg" alt="" class="profile" /></p>
+                <p style="text-align: justify; color: black;">
+                    Welcome to our RSVP page! you can sign in to view or modify your RSVP. 
+
+                    We will be providing babsitting and an alternative space/games for kids (less than 16). To ensure we have adequate babysitters, for those with kids, please RSVP by XX date. 
+                </p>
+                <br>
+            </div>
+
+            <h1>RSVP Signin</h1>
+            <!-- <h2>Please enter your last name and PIN</h2> -->
+            <br>
+            <br>
+
+            <form id="checkForm">
+                <label style="color:black" for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+                <label style="color:black" for="uniqueId">PIN (provided in save the date email):</label>
+                <input type="text" id="uniqueId" name="uniqueId" required>
+                <br>
+                <button type="submit">Signin</button>
+            </form>
+            <h1 id="result"></h1>
+        
+            <div class="contact-form hidden" id="rsvpForm">
+                <div class="column">
+                    <form class="gform" data-email="mason@molesky.us"
+                        action="https://script.google.com/macros/s/AKfycbyLxJfCVz8QeJs96UKOFC_LJoON9eBvRlD1xPHxFFsZOO8ae5cu/exec"
+                        method="POST">
+                        
+                        <input type="hidden" id="hashValue" name="hashValue">
+
+                        <label for="email">EMAIL</label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                        <label for="subject">PHONE</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone">
+                        <label for="subject">ADDRESS</label>
+                        <input type="text" id="address" name="address" placeholder="Address (used for thank you cards)">
+
+                        <select name="rsvpPreference" id="rsvpPreference">
+                            <option value="" disabled selected>Contact Preference</option>
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                        </select>
+
+                        <select name="rsvpCeremony" id="rsvpCeremony">
+                            <option value="" disabled selected>Will you attend the ceremony?</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>
+
+                        <select name="rsvpReception" id="rsvpReception">
+                            <option value="" disabled selected>Will you attend the reception?</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>
+
+                        <select name="numAdult" id="numAdult">
+                            <option value="" disabled selected>Number of adults attending (age 16+)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <select name="numkids" id="numKids">
+                            <option value="" disabled selected>Number of kids attending (less than age 16)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+
+                        <label for="message">MESSAGE</label>
+                        <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+                        <input type="submit" value="SUBMIT">
+                        <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
+                        <div style="display:none" class="thankyou_message">
+                            <h2><em>Thanks</em> for RSVPing! We look forward to celebrating with you. 
+                            </h2>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="copyright" class="container">
+        <p>Created by Mason with lots of <span class="fa pulse2">&hearts;</span> for Emily</p>
+    </div>
+
+    <script src="/nav_scroll.js"></script>
+    <script src="signin.js"></script>
+
+</body>
+</html>
