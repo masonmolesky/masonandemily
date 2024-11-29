@@ -43,8 +43,13 @@
                 <p><img src="/photos/headshot2.jpg" alt="" class="profile" /></p>
                 <p style="text-align: justify; color: black;">
                     Welcome to our RSVP page! you can sign in to view or modify your RSVP. 
-
-                    We will be providing babsitting and an alternative space/games for kids (less than 16). To ensure we have adequate babysitters, for those with kids, please RSVP by XX date. 
+                    <br>
+                    <br>
+                    We hope our wedding will be a family friendly event and ask that you note any kids that you will be bringing with. 
+                    For kids younger than 16, will be providing babsitting and an alternative space/games. To ensure we have adequate babysitters, please RSVP by XX date. 
+                    <br>
+                    <br>
+                    We will also be providing a shuttle service to and from the wedding hotel the day of the wedding. 
                 </p>
                 <br>
             </div>
@@ -61,9 +66,9 @@
                 <label style="color:black" for="uniqueId">PIN (provided in save the date email):</label>
                 <input type="text" id="uniqueId" name="uniqueId" required>
                 <br>
-                <button type="submit">Signin</button>
+                <button type="submit">Sign in</button>
             </form>
-            <h1 id="result"></h1>
+            <!-- <h1 id="result"></h1> -->
         
             <div class="contact-form hidden" id="rsvpForm">
                 <div class="column">
@@ -79,12 +84,6 @@
                         <input type="text" id="phone" name="phone" placeholder="Phone">
                         <label for="subject">ADDRESS</label>
                         <input type="text" id="address" name="address" placeholder="Address (used for thank you cards)">
-
-                        <select name="rsvpPreference" id="rsvpPreference">
-                            <option value="" disabled selected>Contact Preference</option>
-                            <option value="phone">Phone</option>
-                            <option value="email">Email</option>
-                        </select>
 
                         <select name="rsvpCeremony" id="rsvpCeremony">
                             <option value="" disabled selected>Will you attend the ceremony?</option>
@@ -102,20 +101,22 @@
                             <option value="" disabled selected>Number of adults attending (age 16+)</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
                         </select>
 
-                        <select name="numkids" id="numKids">
-                            <option value="" disabled selected>Number of kids attending (less than age 16)</option>
+                        <select name="numkids" id="numKidsfour">
+                            <option value="" disabled selected>Number of kids attending (less than age 4)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+
+                        <select name="numkids" id="numKidsfourplus">
+                            <option value="" disabled selected>Number of kids attending (lage 4-15)</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
                         </select>
 
                         <label for="message">MESSAGE</label>
