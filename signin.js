@@ -39,7 +39,7 @@ document.getElementById('checkForm').addEventListener('submit', function(event) 
         signinTitle.style.display = 'none';  
 
 
-        rsvpForm.classList.remove('hidden'); //REMOVE BEFORE GOING LIVE <-------------------------
+        // rsvpForm.classList.remove('hidden'); //REMOVE BEFORE GOING LIVE <-------------------------
 
         // Fetch RSVP data from Google Sheets based on the hashValue // AKfycbw6YvcMhO3KnELG4CuA9JxQB1gZ8qBH0QV9HzElLj8
         fetch(`https://script.google.com/macros/s/AKfycbwEX356bH8UQCTiP2w5mbKFViqrYMdgwx_vIMPAJ-uTqa1fvcLh9GV1RpSWLaCC2M7e/exec?hashValue=${hashedValue}`)
