@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // rsvpForm.classList.remove('hidden'); //REMOVE BEFORE GOING LIVE <-------------------------
 
             // Fetch RSVP data from Google Sheets based on the hashValue // AKfycbw6YvcMhO3KnELG4CuA9JxQB1gZ8qBH0QV9HzElLj8
-            fetch(`https://script.google.com/macros/s/AKfycbxT3kowaxi_vphShUcrfZiRsiLtIxCsomw73uCw53Q7CgykC2D2x95DPCgN36yTkajW/exec?hashValue=${hashedValue}`, {mode: 'no-cors', method: 'GET'})
+            fetch(`https://script.google.com/macros/s/AKfycbxT3kowaxi_vphShUcrfZiRsiLtIxCsomw73uCw53Q7CgykC2D2x95DPCgN36yTkajW/exec?hashValue=${hashedValue}`,)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("Network response was not ok");
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })            
                 .then(data => {
                     // Populate RSVP form with existing data
+                    console.log('Fetched data:', data);
                     document.getElementById('email').value = data.email;
                     document.getElementById('phone').value = data.phone;
                     document.getElementById('address').value = data.address;
