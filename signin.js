@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // rsvpForm.classList.remove('hidden'); //REMOVE BEFORE GOING LIVE <-------------------------
 
             // Fetch RSVP data from Google Sheets based on the hashValue // AKfycbw6YvcMhO3KnELG4CuA9JxQB1gZ8qBH0QV9HzElLj8
-            fetch(`https://script.google.com/macros/s/AKfycbzFKnmRUuzZ_1urtfU2VukZqSWCzbDxT2IFK-4FJrMmpcFozRLIrwnzCMEg9ZsaQhjp/exec?hashValue=${hashedValue}`, {method: 'GET', mode: 'cors'})
+            fetch(`https://script.google.com/macros/s/AKfycbyfceIHhv_5rbtIy29IkGE4Ks_Xz9brWKq1keGdSDJ3Qn4JnZqYacG7h0sVnHa0L5rg/exec?hashValue=${hashedValue}`, {method: 'GET', mode: 'cors'})
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("Network response was not ok");
