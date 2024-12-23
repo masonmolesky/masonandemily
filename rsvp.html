@@ -147,7 +147,7 @@
                         const uniqueId = document.getElementById('uniqueId').value;
                         const hashValue = CryptoJS.SHA256(lastName + uniqueId).toString();
             
-                        const response = await fetch(`https://script.google.com/macros/s/AKfycby4Vhb7FP_4FVopA-EefZMFiOCskD_xm05jxs0dEFcvijAlqrT_i12bHjRUi3RNFpZv/exec?hashValue=${hashValue}`);
+                        const response = await fetch(`https://script.google.com/macros/s/AKfycbyfNvMl0YiNjl-Hb-gl9-EhfZGDCRM479p94zEQGj21DJySD3oAVC_DlrgcXWzi-KMU/exec?hashValue=${hashValue}`);
                         const data = await response.json();
             
                         if (data) {
@@ -174,7 +174,7 @@
                         const formData = new FormData(rsvpForm);
                         const params = new URLSearchParams(formData).toString();
             
-                        const response = await fetch('https://script.google.com/macros/s/AKfycbwSQ5guLwRHLPI9oEoieA9rpBcb9iBowE2xxwqxUSvXL3wd0TEtwxSR73dVSyAAR5jK/exec?hashValue=${hashValue}', {
+                        const response = await fetch('https://script.google.com/macros/s/AKfycbwmY1BRO0ArlZI_MJPI4sShGkdAOBAGPpAZJ2PsDJNqvMGjK8o4G3eTlxsLkGSB90-z/exec?hashValue=${hashValue}', {
                             method: 'POST',
                             body: params,
                             headers: {
