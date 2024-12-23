@@ -147,7 +147,7 @@
                         const uniqueId = document.getElementById('uniqueId').value;
                         const hashValue = CryptoJS.SHA256(lastName + uniqueId).toString();
             
-                        const response = await fetch(`https://script.google.com/macros/s/AKfycby0ShUTEfEOns7QG5loK6uL-ozz1f-_4jtt8ofz7Wt_4Uts9TYaSce3U7cmG2Yi-e4j/exec?hashValue=${hashValue}`);
+                        const response = await fetch(`https://script.google.com/macros/s/AKfycbxxEX17Tpc1HVfN64PHXbDuMg3K3qlRqmaPwkNYdozW_EHTI2LB74kfFROHXGIbspS9/exec?hashValue=${hashValue}`);
                         const data = await response.json();
             
                         if (data) {
@@ -173,7 +173,7 @@
                         const formData = new FormData(rsvpForm);
                         const params = new URLSearchParams(formData).toString();
             
-                        const response = await fetch('https://script.google.com/macros/s/AKfycby0ShUTEfEOns7QG5loK6uL-ozz1f-_4jtt8ofz7Wt_4Uts9TYaSce3U7cmG2Yi-e4j/exec', {
+                        const response = await fetch('https://script.google.com/macros/s/AKfycbxxEX17Tpc1HVfN64PHXbDuMg3K3qlRqmaPwkNYdozW_EHTI2LB74kfFROHXGIbspS9/exec', {
                             method: 'POST',
                             body: params,
                             headers: {
