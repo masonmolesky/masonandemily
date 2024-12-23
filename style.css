@@ -814,6 +814,38 @@ footer p {
     /* Optional: add rounded corners to the border */
 }
 
+/* General Section Styling */
+.section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.section .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: powderblue;
+    border: none;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section .btn:hover {
+    background-color: lightblue;
+}
+
+
 /* Styling the container */
 .bucket {
     display: flex;
@@ -834,6 +866,14 @@ footer p {
     align-items: center; /* Center content vertically */
 }
 
+.row2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
 /* Style for each item */
 .item img {
     /* width: 100%; Make images responsive */
@@ -849,7 +889,7 @@ footer p {
 }
 
 .item p {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     max-width: 100%; /* Ensure the text doesn’t overflow */
 }
