@@ -151,7 +151,7 @@
 
                         try {
                             const response = await fetch(
-                                `https://script.google.com/macros/s/AKfycbxJP7ZwmZS3uWhzdKbXsRwxki3zQgPs7WN3khBdHrQqrSIexJVb7MutGKeqwS19N6y0/exec?hashValue=${hashValue}`, {
+                                `https://script.google.com/macros/s/AKfycbzYFhAhjISHLoow5aIPOnkkqbL4eA3tp29de84clLdPRpq6Yf0AUsNL7NeW_wR3GWK1/exec?hashValue=${hashValue}`, {
                                     method: "GET",
                                     redirect: "follow",
                                     headers: {
@@ -169,7 +169,8 @@
                                 document.getElementById('rsvpReception').value = data.rsvpReception || '';
                                 document.getElementById('numAdult').value = data.numAdult || '';
                                 document.getElementById('numKidsUnder4').value = data.numKidsUnder4 || '';
-                                document.getElementById('numKidsfourplus').value = data.numKidsfourplus || '';
+                                document.getElementById('numKidsfourplus').value = data.numKidsfourplus ||
+                                    '';
                                 document.getElementById('message').value = data.message || '';
                             } else {
                                 alert(data.error || 'Error retrieving RSVP details.');
@@ -188,7 +189,7 @@
 
                         try {
                             const response = await fetch(
-                                'https://script.google.com/macros/s/AKfycbxJUaj9mcwhINjOECk6VBwN7w0JaOjBGewD9n7ab_oopKvpbv9LA9BcNlAUIKY0LpSe/exec', {
+                                'https://script.google.com/macros/s/AKfycbxAmuFMd5CUsTpU5Uodd6XS8kzbsN_yd96uYTn8_CpI8JYX2vAEQBL-8kypEp3QgR4/exec', {
                                     redirect: "follow",
                                     method: "POST",
                                     body: JSON.stringify(DATA),
