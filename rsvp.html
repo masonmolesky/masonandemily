@@ -154,7 +154,6 @@
                                 `https://script.google.com/macros/s/AKfycbyqSctX2agh_cpuIvPcQqU7WZ2WaqIRpJaYAqBB_5TTRlLyCIQkrpHW_dKqf8HaAHgz/exec?hashValue=${hashValue}`, {
                                     method: "GET",
                                     redirect: "follow",
-                                    body: JSON.stringify(DATA),
                                     headers: {
                                         "Content-Type": "text/plain;charset=utf-8",
                                     },
@@ -170,14 +169,13 @@
                                 document.getElementById('rsvpReception').value = data.rsvpReception || '';
                                 document.getElementById('numAdult').value = data.numAdult || '';
                                 document.getElementById('numKidsUnder4').value = data.numKidsUnder4 || '';
-                                document.getElementById('numKidsfourplus').value = data.numKidsfourplus ||
-                                    '';
+                                document.getElementById('numKidsfourplus').value = data.numKidsfourplus || '';
                                 document.getElementById('message').value = data.message || '';
                             } else {
                                 alert(data.error || 'Error retrieving RSVP details.');
                             }
                         } catch (err) {
-                            alert('Error connecting to the server.');
+                            alert('Error connecting to the server. GET');
                         }
                     });
 
@@ -203,7 +201,7 @@
                             alert(result === 'Success' ? 'RSVP updated successfully!' :
                                 'Error updating RSVP.');
                         } catch (err) {
-                            alert('Error connecting to the server.');
+                            alert('Error connecting to the server. POST');
                         }
                     });
                 </script>
