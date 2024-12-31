@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="/nav_scroll.js"></script>
+    <title>Mason & Emily are getting married!</title>
+</head>
+
+<body class="alt">
+    <nav id="nav">
+        <div class="logo"><a href="#"><img src="img/M & Em_transparent heart red.png" alt="Logo"></a></div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ourstory.html">Our Story</a></li>
+            <li><a href="/venue.html">Venue</a></li>
+            <li><a href="/pictures.html">Pictures</a></li>
+            <li><a href="/rsvp.html">RSVP</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="title">
+            <h2>MASON & EMILY</h2>
+            <span class="byline">12.21.25</span>
+        </div>
+</body>
+
+<body>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="/img/slide1.png" alt="Wedding Photo 1"></div>
+            <div class="slide"><img src="/img/slide2.png" alt="Wedding Photo 2"></div>
+            <div class="slide"><img src="/img/slide3.png" alt="Wedding Photo 3"></div>
+        </div>
+        <div class="buttons">
+            <button class="button" id="prev">&#10094;</button>
+            <button class="button" id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const slideCount = slides.children.length;
+        let index = 0;
+
+        function showSlide(newIndex) {
+            if (newIndex < 0) {
+                index = slideCount - 1;
+            } else if (newIndex >= slideCount) {
+                index = 0;
+            } else {
+                index = newIndex;
+            }
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(index + 1);
+        }
+
+        function prevSlide() {
+            showSlide(index - 1);
+        }
+
+        document.getElementById('next').addEventListener('click', nextSlide);
+        document.getElementById('prev').addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+    <div id="copyright" class="container">
+        <p>Created by Mason with lots of <span class="fa pulse2">&hearts;</span> for Emily</p>
+    </div>
+
+</body>
+
+</html>

@@ -367,7 +367,7 @@ a:hover {
 body.alt {
     margin: 0px;
     padding: 0px;
-    padding-top: 8vh;
+    padding-top: 1vh;
     min-height: 400px;
     background: white;
     background-image: none;
@@ -920,3 +920,62 @@ footer p {
 .row:nth-child(even) .item:nth-child(2) {
     grid-area: image;
 }  
+
+/*picture slider styling*/
+.slider {
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Horizontally center the slider */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 1;
+}
