@@ -9,27 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Mason & Emily are getting married!</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="img/wedding-rings-icon.svg" sizes="any" type="image/svg+xml">
-  <link rel="icon" href="img/wedding-rings_531864.png" type="image/png"> <!-- Fallback -->
+    <!-- Favicon -->
+    <link rel="icon" href="mg/wedding-rings-icon.svgi" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="img/wedding-rings_531864.png" type="image/png"> <!-- Fallback -->
 
     <!-- Include CryptoJS library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
 </head>
 
-
-
-
 <body class="alt">
     <nav id="nav">
-        <div class="logo"><a href="#"><img src="img/M & Em_transparent heart red.png" alt="Logo"></a></div>
-
+        <div class="homebutton"><a href="/index.html">Lake Frederick, VA</a></div>
         <ul class="nav-links">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/ourstory.html">Our Story</a></li>
-            <li><a href="/venue.html">Venue</a></li>
+            <li><a href="/stay.html">Stay</a></li>
             <li><a href="/pictures.html">Pictures</a></li>
+            <li><a href="/schedule.html">Schedule</a></li>
             <li><a href="/rsvp.html">RSVP</a></li>
         </ul>
         <div class="burger">
@@ -54,15 +51,12 @@
                     bringing with.
                     For kids younger than 16, will be providing babsitting and an alternative space/games. To ensure we
                     have adequate babysitters, please RSVP by XX date.
-                    <br>
-                    <br>
-                    We will also be providing a shuttle service to and from the wedding hotel the day of the wedding.
                 </p>
                 <br>
             </div>
 
             <h1>RSVP Signin</h1>
-            <!-- <h2>Please enter your last name and PIN</h2> -->
+            <h2>Please enter your last name and PIN</h2>
             <br>
             <br>
 
@@ -76,139 +70,13 @@
                 <button type="submit">Sign in</button>
             </form>
             <h1 id="result"></h1>
-
-            <div class="contact-form hidden" id="rsvpForm">
-                <div class="column">
-                    <form class="gform">
-                        <!-- action="https://script.google.com/macros/s/AKfycbyLxJfCVz8QeJs96UKOFC_LJoON9eBvRlD1xPHxFFsZOO8ae5cu/exec"
-                        method="POST"> -->
-
-                        <input type="hidden" id="hashValue" name="hashValue">
-
-                        <label for="email">EMAIL</label>
-                        <input type="text" id="email" name="email" placeholder="Email">
-                        <label for="phone">PHONE</label>
-                        <input type="text" id="phone" name="phone" placeholder="Phone">
-                        <label for="address">ADDRESS</label>
-                        <input type="text" id="address" name="address" placeholder="Address (used for thank you cards)">
-
-                        <select name="rsvpCeremony" id="rsvpCeremony">
-                            <option value="" disabled selected>Will you attend the ceremony?</option>
-                            <option value="yes">yes</option>
-                            <option value="no">no</option>
-                        </select>
-
-                        <select name="rsvpReception" id="rsvpReception">
-                            <option value="" disabled selected>Will you attend the reception?</option>
-                            <option value="yes">yes</option>
-                            <option value="no">no</option>
-                        </select>
-
-                        <select name="numAdult" id="numAdult">
-                            <option value="" disabled selected>Number of adults attending (age 16+)</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-
-                        <select name="numkids" id="numKidsUnder4">
-                            <option value="" disabled selected>Number of kids attending (less than age 4)</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-
-                        <select name="numkids" id="numKidsfourplus">
-                            <option value="" disabled selected>Number of kids attending (lage 4-15)</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-
-                        <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
-                        <input type="submit" value="SUBMIT">
-                        <!-- <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script> -->
-
-                        <div style="display:none" class="thankyou_message">
-                            <h2><em>Thanks</em> for RSVPing! We look forward to celebrating with you.
-                            </h2>
-                        </div>
-
-                    </form>
-                </div>
-
-                <script>
-                    const checkForm = document.getElementById('checkForm');
-                    const rsvpForm = document.getElementById('rsvpForm');
-                    const resultDiv = document.getElementById('result');
-
-                    checkForm.addEventListener('submit', async (event) => {
-                        event.preventDefault();
-
-                        const lastName = document.getElementById('lastName').value;
-                        const uniqueId = document.getElementById('uniqueId').value;
-                        const hashValue = CryptoJS.SHA256(lastName + uniqueId).toString();
-
-                        try {
-                            const response = await fetch(
-                                `https://script.google.com/macros/s/AKfycbwLC6Z1U3z4vxsjOzNsMKJx00uHRjMNIOGAVPIeXVdx7EtmuNTgZt2M96xyEvg-Rf8v/exec?hashValue=${hashValue}`, {
-                                    method: "GET",
-                                    redirect: "follow",
-                                    headers: {
-                                        "Content-Type": "text/plain;charset=utf-8",
-                                    },
-                                });
-                            const data = await response.json();
-
-                            if (data && !data.error) {
-                                rsvpForm.style.display = 'block';
-                                document.getElementById('email').value = data.email || '';
-                                document.getElementById('phone').value = data.phone || '';
-                                document.getElementById('address').value = data.address || '';
-                                document.getElementById('rsvpCeremony').value = data.rsvpCeremony || '';
-                                document.getElementById('rsvpReception').value = data.rsvpReception || '';
-                                document.getElementById('numAdult').value = data.numAdult || '';
-                                document.getElementById('numKidsUnder4').value = data.numKidsUnder4 || '';
-                                document.getElementById('numKidsfourplus').value = data.numKidsfourplus ||
-                                    '';
-                                document.getElementById('message').value = data.message || '';
-                            } else {
-                                alert(data.error || 'Error retrieving RSVP details.');
-                            }
-                        } catch (err) {
-                            alert('Error connecting to the server. GET');
-                        }
-                    });
-
-                    rsvpForm.addEventListener('submit', async (event) => {
-                        event.preventDefault();
-
-                        const formData = new FormData(rsvpForm);
-                        const hashValue = document.getElementById('hashValue').value;
-                        const params = new URLSearchParams(formData).toString();
-
-                        try {
-                            const response = await fetch(
-                                'https://script.google.com/macros/s/AKfycbzoNYpsvfAp88dvwrdD8bLZw8fktPNzyP0hA7691G5e47_5hj_ftSHVnEheTnvtm8se/exec', {
-                                    redirect: "follow",
-                                    method: "POST",
-                                    body: JSON.stringify(DATA),
-                                    headers: {
-                                        "Content-Type": "text/plain;charset=utf-8",
-                                    },
-                                });
-
-                            const result = await response.text();
-                            alert(result === 'Success' ? 'RSVP updated successfully!' :
-                                'Error updating RSVP.');
-                        } catch (err) {
-                            alert('Error connecting to the server. POST');
-                        }
-                    });
-                </script>
-            </div>
+            <iframe id="rsvpIframe" style="width:100%;height:500px;border:none;" 
+                src="https://testweddingsite1.anrsvp.com/?embed=true">
+            </iframe>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 

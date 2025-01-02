@@ -86,6 +86,7 @@ nav.sticky {
 
 .nav-links li {
     list-style: none;
+    font-family: 'Georgia', cursive;
 }
 
 .nav-links a {
@@ -123,7 +124,7 @@ nav.sticky {
     /* Smooth transition */
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
     body {
         overflow-x: hidden;
     }
@@ -329,12 +330,20 @@ body {
     }
 }
 
-h1, h2, h3 {
+h1, h3 {
     margin: 0;
     padding: 0;
     font-weight: 600;
     color: #454445;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: #454445;
+    font-family: 'Georgia', cursive;
 }
 
 p, ol, ul {
@@ -545,20 +554,20 @@ body.std.fixed-nav nav{
 
 /* TITLE */
 .title {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     text-align: center;
 }
 
 .title h2 {
     letter-spacing: 3px;
     font-size: 26px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Georgia', cursive;
     color: #050404;
 }
 
 .byline {
     font-size: 20px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Georgia', cursive;
     color: #050404;
 }
 
@@ -571,7 +580,7 @@ body.std.fixed-nav nav{
 
 #page {
     overflow: hidden;
-    padding: 2em 0em 4em 0em;
+    padding: 1em 0em 1em 0em;
     background: transparent;
     /* Ensure wrapper does not override body background */
 
@@ -846,80 +855,60 @@ footer p {
 }
 
 
-/* Styling the container */
+/* Container for all rows */
 .bucket {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between rows */
-    margin-bottom: 30px; /* Add spacing below */
-    padding-bottom: 30px; /* Optional, adds internal spacing */
-    max-width: 1400px; /* Optional: Limit container width */
-    margin: 0 auto; /* Center the container */
-    color: black;
+    gap: 40px; /* Space between rows */
+    max-width: 800px;
+    margin: 0 auto;
+    color: black; /* Set default text color */
 }
 
-/* Style for the rows */
+/* Each question-answer row */
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
-    align-items: center; /* Center content vertically */
-}
-
-.row2 {
-    display: flex;
+    grid-template-columns: 1fr 1px 1fr; /* Question, divider, Answer */
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    gap: 20px;
+    position: relative; /* Position for pseudo-element (::before) */
 }
 
-/* Style for each item */
-.item img {
-    /* width: 100%; Make images responsive */
-    width: 600px; /* Set a fixed width for the container */
-    /* height: 400px;  */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners to images */
+/* Divider between question and answer */
+.row::before {
+    content: "";
+    grid-column: 2; /* Place in the middle column */
+    background-color: black; /* Ensure line is visible */
+    width: 1px; /* Line width */
+    height: 80%; /* Adjust height as needed */
+    position: absolute; /* Stack within the row */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%);
 }
 
-.item p, .item h2 {
-    margin: 0; /* Remove extra spacing */
-    color: #333; /* Adjust text color */
+/* Left-side item (Question) */
+.item.left {
+    text-align: right; /* Align to the right side */
+    grid-column: 1; /* Place in the first column */
+}
+
+/* Right-side item (Answer) */
+.item.right {
+    text-align: left; /* Align to the left side */
+    grid-column: 3; /* Place in the third column */
+    color: black; /* Ensure the text is black */
+}
+
+.item h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .item p {
-    font-size: 18px;
-    line-height: 1.4;
-    max-width: 100%; /* Ensure the text doesn’t overflow */
+    font-size: 16px;
+    margin: 0;
 }
-
-/* Styling for alternating rows */
-/* Odd rows: Image on the left, text on the right */
-.row:nth-child(odd) {
-    grid-template-areas: "image text";
-}
-
-.row:nth-child(odd) .item:nth-child(1) {
-    grid-area: image;
-}
-
-.row:nth-child(odd) .item:nth-child(2) {
-    grid-area: text;
-}
-
-/* Even rows: Text on the left, image on the right */
-.row:nth-child(even) {
-    grid-template-areas: "text image";
-}
-
-.row:nth-child(even) .item:nth-child(1) {
-    grid-area: text;
-}
-
-.row:nth-child(even) .item:nth-child(2) {
-    grid-area: image;
-}  
 
 /*picture slider styling*/
 .slider {
@@ -978,4 +967,67 @@ footer p {
 
 .button:hover {
     opacity: 1;
+}
+
+/* homebutton */
+.homebutton {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-family: 'Georgia', cursive;
+    color: #050404;
+}
+
+.ourstory {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 15px; /* Add space between the image and the text */
+    text-align: center; /* Ensure text inside is centered */
+}
+
+.ourstory img {
+    margin-right: 15px; /* Add space between the image and the text */
+    width: 400px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.ourstory p {
+    text-align: left; /* Align text to the left */
+    color: black; /* Text color */
+    max-width: 400px; /* Optional: Set a maximum width for the text block */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Space between events */
+    font-family: 'Georgia', cursive;
+    padding-bottom: 5em;
+}
+
+.event {
+    text-align: center;
+}
+
+.event p {
+    font-size: 1em;
+    color: #000; /* Black text color */
+    margin: 0;
+}
+
+.event h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px 0; /* Space between the title and time */
+    color: #000; /* Black text color */
+    font-family: 'Georgia', cursive;
+}
+
+.icon {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
+    margin-bottom: 10px; /* Space between icon and title */
 }
