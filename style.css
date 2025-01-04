@@ -900,9 +900,8 @@ footer p {
     grid-column: 2; /* Place in the middle column */
     background-color: black; /* Line color */
     width: 2px; /* Line thickness */
-    height: 80%; /* Stretch to 80% of the row height */
+    height: 90%; /* Stretch to 80% of the row height */
     align-self: center; /* Vertically center the line */
-    justify-self: center; /* Horizontally center the line */
 }
 
 .row {
