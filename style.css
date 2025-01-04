@@ -895,6 +895,7 @@ footer p {
 
 /* Divider between question and answer */
 .row::before {
+    position: absolute;
     content: ""; /* Creates the line */
     grid-column: 2; /* Place in the middle column */
     background-color: black; /* Line color */
