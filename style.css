@@ -904,22 +904,6 @@ footer p {
     align-self: center; /* Vertically center the line */
 }
 
-.row {
-    border: 1px solid red; /* Outline the row for debugging */
-}
-
-.row > .item.left {
-    border: 1px solid green; /* Debug question area */
-}
-
-.row > .item.right {
-    border: 1px solid blue; /* Debug answer area */
-}
-
-.row::before {
-    border: 1px solid yellow; /* Debug pseudo-element placement */
-}
-
 /* Left-side item (Question) */
 .item.left {
     text-align: right; /* Align to the right side */
