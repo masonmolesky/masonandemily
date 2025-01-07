@@ -863,6 +863,7 @@ footer p {
     max-width: 800px;
     margin: 0 auto;
     color: black; /* Set default text color */
+    padding-bottom: 60px;
 }
 
 
@@ -1022,7 +1023,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px; /* Space between events */
+    gap: 10px; /* Space between events */
     font-family: 'Georgia', cursive;
     padding-bottom: 5em;
 }
@@ -1032,7 +1033,7 @@ footer p {
 }
 
 .event p {
-    font-size: 1em;
+    font-size: 18px;
     color: #000; /* Black text color */
     margin: 0;
 }
@@ -1068,4 +1069,43 @@ iframe[src*="rsvpify"] {
     color: black; /* Sets text color */
     font-size: 18px; /* Adjust font size as needed */
     line-height: 1.5; /* Adjust line height for readability */
+}
+
+.countdown-container {
+    font-size: 24px;
+    color: #2a9d8f; /* Green color for text */
+    background: #dbdada;
+    padding: 10px 20px;
+    display: inline-block; /* Makes the box size only as wide as the content */
+  }
+
+  .countdown-container span {
+    font-weight: bold;
+    font-size: 32px;
+    color: #313131;
+    margin-right: 5px;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    margin-top: 10px; /* Space from the top of the page */
+    text-align: center; /* Ensure text is centered */
+    font-weight: bold;
+}
+
+#content .countdown-container {
+    font-size: 24px;
+    font-weight: bold;
+    color: #bfbfbf; /* Green color for text */
+    background:none;
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: inline-block; /* Box size matches content */
+    margin-top: 10px; /* Space below the title */
+}
+
+#content .title {
+    margin: 0;
 }
