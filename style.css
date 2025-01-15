@@ -208,6 +208,9 @@ body {
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove default padding */
     }
+    nav{
+        background-color: transparent !important; /* Ensures transparency on mobile */
+    }
 }
 
 h2 {
