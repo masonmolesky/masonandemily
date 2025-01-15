@@ -37,34 +37,37 @@
                     <h2>Mason & Emily</h2>
                     <span class="byline">12.21.2025</span>
                 </div>
+                <br>
                 <div class="countdown-container">
                     <span id="days">0</span> days until our wedding!
                 </div>
             </div>
         </div>
 
-          <script>
-            const weddingDate = new Date("December 21, 2025 16:00:00").getTime();
-        
+        <script>
+            const weddingDate = new Date("December 21, 2025 16:30:00").getTime();
+          
             function updateCountdown() {
               const now = new Date().getTime();
               const timeLeft = weddingDate - now;
-        
+          
               const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        
-              document.getElementById('days').textContent = days;
-        
+          
               if (timeLeft <= 0) {
                 clearInterval(countdownInterval);
                 document.querySelector('.countdown-container').innerHTML = `
-                  <h1>We're Married!</h1>
-                  <p>Thank you for joining us on this special day!</p>`;
+                  <p>We're Married! Thank you for joining us on this special day!</p>`;
+              } else {
+                // Update the countdown message
+                document.querySelector('.countdown-container').innerHTML = `
+                  <span id="days">${days}</span> ${days === 1 ? 'day' : 'days'} until our wedding!`;
               }
             }
-        
+          
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown(); // Call immediately to avoid delay
           </script>
+          
         
     </div>
     
