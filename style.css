@@ -931,20 +931,15 @@ footer p {
 
 /* Left-side item (Question) */
 .item.left {
-    text-align: right;
-    /* Align to the right side */
-    grid-column: 1;
-    /* Place in the first column */
+    text-align: right; /* Align to the right side */
+    grid-column: 1; /* Place in the first column */
 }
 
 /* Right-side item (Answer) */
 .item.right {
-    text-align: left;
-    /* Align to the left side */
-    grid-column: 3;
-    /* Place in the third column */
-    color: black;
-    /* Ensure the text is black */
+    text-align: left; /* Align to the left side */
+    grid-column: 3; /* Place in the third column */
+    color: black; /* Ensure the text is black */
 }
 
 .item h2 {
@@ -969,8 +964,7 @@ footer p {
     border: 5px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    /* Horizontally center the slider */
+    margin: 0 auto; /* Horizontally center the slider */
 }
 
 .slides {
@@ -1029,27 +1023,18 @@ footer p {
 }
 
 .ourstory {
-    display: flex;
-    /* Use Flexbox for layout */
-    justify-content: center;
-    /* Center items horizontally */
-    align-items: center;
-    /* Center items vertically */
-    gap: 15px;
-    /* Add space between the image and the text */
-    text-align: center;
-    /* Ensure text inside is centered */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 15px; /* Add space between the image and the text */
+    text-align: center; /* Ensure text inside is centered */
 }
 
 .ourstory img {
-    margin-right: 15px;
-    /* Add space between the image and the text */
-    width: 400px;
-    /* Fixed width for the image */
-    height: auto;
-    /* Maintain aspect ratio */
-    border-radius: 8px;
-    /* Optional rounded corners */
+    margin-right: 15px; /* Add space between the image and the text */
+    width: 400px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounded corners */
 }
 
 .ourstory p {
@@ -1114,7 +1099,7 @@ iframe[src*="rsvpify"] {
 
 .countdown-container {
     position: fixed; /* Sticks to the bottom of the viewport */
-    bottom: 20px; /* Adds spacing from the bottom */
+    bottom: 60px; /* Adds spacing from the bottom */
     left: 50%; /* Centers it horizontally */
     transform: translateX(-50%); /* Adjusts for the element's width */
     padding: 15px 25px; /* Adds padding */
@@ -1145,13 +1130,13 @@ iframe[src*="rsvpify"] {
     font-size: 24px;
     font-weight: bold;
     color: #000000; /* Green color for text */
-    background: none;
+    background: #d7d7d7;
     backdrop-filter: blur(5px); /* Adds a blur effect */
-    padding: 5px 5px;
+    padding: 3px 5px;
     border-radius: 10px;
     display: inline-block; /* Box size matches content */
-    margin-top: 10px; /* Space below the title */
-    padding-bottom: 40px;
+    margin-top: 5px; /* Space below the title */
+    padding-bottom: 5px;
 }
 
 #content .title {
