@@ -50,8 +50,7 @@ nav {
     display: none;
     cursor: pointer;
     position: relative;
-    z-index: 1001;
-    /* Ensure it's above other elements */
+    z-index: 1001; /* Ensure it's above other elements */
 }
 
 .burger div {
@@ -59,8 +58,7 @@ nav {
     height: 3px;
     background-color: black;
     margin: 5px;
-    transition: all 0.3s ease;
-    /* Smooth transition */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 @media screen and (max-width: 1000px) {
@@ -71,37 +69,28 @@ nav {
     .nav-links {
         position: absolute;
         right: 0;
-        top: 0;
-        /* Start from the top of the screen */
+        top: 0; /* Start from the top of the screen */
         width: 100%;
-        height: 100vh;
-        /* Full viewport height */
+        height: 100vh; /* Full viewport height */
         background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        /* Center items vertically */
+        justify-content: center; /* Center items vertically */
         transition: opacity 0.5s ease-in, max-height 0.5s ease-in;
-        opacity: 0;
-        /* Initially hidden */
-        max-height: 0;
-        /* Initially collapsed */
-        overflow: hidden;
-        /* Hide overflowing content */
+        opacity: 0; /* Initially hidden */
+        max-height: 0; /* Initially collapsed */
+        overflow: hidden; /* Hide overflowing content */
     }
 
     .nav-links.nav-active {
-        opacity: 1;
-        /* Fully visible when active */
-        max-height: 100vh;
-        /* Allow full height when active */
+        opacity: 1; /* Fully visible when active */
+        max-height: 100vh; /* Allow full height when active */
     }
 
     .nav-links li {
         opacity: 1;
-        margin: 40px 0;
-        /* Adjust spacing between menu items */
+        margin: 40px 0; /* Adjust spacing between menu items */
     }
 
     .burger {
@@ -117,8 +106,7 @@ nav {
     .burger.toggle .line1,
     .burger.toggle .line2,
     .burger.toggle .line3 {
-        z-index: 1001;
-        /* Ensure burger menu lines stay on top when toggled */
+        z-index: 1001;/* Ensure burger menu lines stay on top when toggled */
     }
 }
 
