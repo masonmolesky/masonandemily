@@ -205,6 +205,11 @@ body {
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove default padding */
     }
+    html {
+        height: 100%;
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+    }
 }
 
 h2 {
