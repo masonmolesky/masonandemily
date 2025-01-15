@@ -198,8 +198,6 @@ body {
         background-image: url('/img/background_mobile.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: scroll;
-        /* Fixed attachment might cause issues on mobile */
         background-position: center center;
         height: 100%;
         margin: 0; /* Remove default margins */
@@ -287,15 +285,14 @@ ul {
 /* PAGE */
 #wrapper {
     background: transparent;
-    display: center;
-    /* Ensure wrapper does not override body background */
+    display: center; /* Ensure wrapper does not override body background */
+    
 }
 
 #page {
     overflow: hidden;
     padding: 1em 0em 1em 0em;
-    background: transparent;
-    /* Ensure wrapper does not override body background */
+    background: transparent; /* Ensure wrapper does not override body background */
 
 }
 
