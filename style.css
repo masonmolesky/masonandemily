@@ -168,7 +168,7 @@ a:visited {
 body {
     margin: 0px;
     padding: 4vh 0 4vh 0; /* Adjust this value based on the height of your navigation bar */
-    background-image: url('/img/background.jpg');
+    background-image: url('/img/background_small.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
