@@ -183,7 +183,7 @@ body {
 /* Adjust for smaller screens */
 @media screen and (max-width: 600px) {
     body {
-        background-image: url('/img/background_mobile.jpg');
+        background-image: url('/img/background_mobile_main.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
