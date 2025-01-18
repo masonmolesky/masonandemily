@@ -106,7 +106,7 @@ nav {
     .burger.toggle .line1,
     .burger.toggle .line2,
     .burger.toggle .line3 {
-        z-index: 1001;/* Ensure burger menu lines stay on top when toggled */
+        z-index: 1001; /* Ensure burger menu lines stay on top when toggled */
     }
 }
 
@@ -167,8 +167,7 @@ a:visited {
 /* HOME PAGE */
 body {
     margin: 0px;
-    padding: 4vh 0 4vh 0;
-    /* Adjust this value based on the height of your navigation bar */
+    padding: 4vh 0 4vh 0; /* Adjust this value based on the height of your navigation bar */
     background-image: url('/img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -191,12 +190,14 @@ body {
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove default padding */
     }
+
     html {
         height: 100%;
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove default padding */
     }
-    nav{
+
+    nav {
         background-color: transparent !important; /* Ensures transparency on mobile */
     }
 }
@@ -209,11 +210,14 @@ h2 {
     font-family: 'Georgia', cursive;
 }
 
-p, ol, ul {
+p,
+ol,
+ul {
     margin-top: 0;
 }
 
-ol, ul {
+ol,
+ul {
     padding: 0;
     list-style: none;
 }
@@ -277,14 +281,12 @@ ul {
 #wrapper {
     background: transparent;
     display: center; /* Ensure wrapper does not override body background */
-    
 }
 
 #page {
     overflow: hidden;
     padding: 1em 0em 1em 0em;
     background: transparent; /* Ensure wrapper does not override body background */
-
 }
 
 /* COPYRIGHT */
@@ -311,7 +313,9 @@ ul {
 
 /* Responsive layout */
 @media screen and (max-width: 1000px) {
-    .column, input[type=submit] {
+
+    .column,
+    input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
@@ -612,7 +616,7 @@ footer p {
 .event h2 {
     font-size: 1.5em;
     font-weight: bold;
-    margin: 5px 0;/* Space between the title and time */
+    margin: 5px 0; /* Space between the title and time */
     color: #000; /* Black text color */
     font-family: 'Georgia', cursive;
 }
