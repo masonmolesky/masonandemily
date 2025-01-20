@@ -447,6 +447,7 @@ footer p {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .itemstay {
@@ -598,7 +599,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between events */
+    gap: 20px; /* Space between events */
     font-family: 'Georgia', cursive;
     padding-bottom: 5em;
 }
@@ -624,7 +625,6 @@ footer p {
 .icon {
     width: 50px; /* Adjust the size of the icon */
     height: 50px;
-    margin-bottom: 10px; /* Space between icon and title */
 }
 
 /* Adjust script iframe to prevent overlapping text */
@@ -683,7 +683,7 @@ iframe[src*="rsvpify"] {
     font-size: 24px;
     font-weight: bold;
     color: #000000; /* Green color for text */
-    background: #d7d7d7;
+    background: rgba(215, 215, 215, 0.5);
     backdrop-filter: blur(5px); /* Adds a blur effect */
     padding: 3px 5px;
     border-radius: 10px;

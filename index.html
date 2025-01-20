@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/style.css"> 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> -->
     <script src="/nav_scroll.js"></script>
     <title>Mason & Emily are getting married!</title>
 
@@ -55,9 +55,19 @@
               const now = new Date().getTime();
               const timeLeft = weddingDate - now;
           
-              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+              // Calculate remaining days
+              const days = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
           
-              if (timeLeft <= 0) {
+              // Check if today is the wedding day
+              const nowDate = new Date().toDateString();
+              const weddingDayDate = new Date(weddingDate).toDateString();
+          
+              if (nowDate === weddingDayDate) {
+                // Wedding day message
+                document.querySelector('.countdown-container').innerHTML = `
+                  <p>Today's the day!</p>`;
+              } else if (timeLeft <= 0) {
+                // After the wedding
                 clearInterval(countdownInterval);
                 document.querySelector('.countdown-container').innerHTML = `
                   <p>We're Married! Thank you for joining us on this special day!</p>`;
@@ -70,14 +80,13 @@
           
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown(); // Call immediately to avoid delay
-          </script>
+          </script>          
     </div>
     
     <div id="copyright" class="container">
         <p>Created by Mason with lots of <span class="fa pulse2">&hearts;</span> for Emily</p>
     </div>
 
-
-
 </body>
+
 </html>
