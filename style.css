@@ -655,17 +655,18 @@ iframe[src*="rsvpify"] {
     transform: translateX(-50%); /* Adjusts for the element's width */
     padding: 15px 25px; /* Adds padding */
     border-radius: 10px; /* Rounds the corners */
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 20px; /* Adjust font size as needed */
     text-align: center; /* Centers the text inside */
     display: inline-block; /* Adjusts width dynamically based on content */
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
     width: auto; /* Auto adjusts width to content */
     max-width: 90%; /* Prevents the container from being too wide */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .countdown-container span {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
     color: #000000;
     margin-right: 5px;
 }
@@ -680,8 +681,9 @@ iframe[src*="rsvpify"] {
 }
 
 #content .countdown-container {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #000000; /* Green color for text */
     background: rgba(215, 215, 215, 0.5);
     backdrop-filter: blur(5px); /* Adds a blur effect */
