@@ -200,6 +200,10 @@ body {
     nav {
         background-color: transparent !important; /* Ensures transparency on mobile */
     }
+
+    body.alt {
+        background-image: none !important;
+    }
 }
 
 h2 {
@@ -246,7 +250,7 @@ body.alt {
     padding-top: 1vh;
     min-height: 400px;
     /* background: white; */
-    background-image: url('/img/christmasBackground1.jpg');
+    background-image: url('/img/christmasBackground3-50.jpg');
     /* background-image: none; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 11pt;
@@ -440,7 +444,7 @@ footer p {
     margin: 0 auto;
     color: black; /* Set default text color */
     margin-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 
