@@ -245,9 +245,10 @@ body.alt {
     padding: 0px;
     padding-top: 1vh;
     min-height: 400px;
-    background: white;
-    background-image: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    /* background: white; */
+    background-image: url('/img/christmasBackground1.jpg');
+    /* background-image: none; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 11pt;
     font-weight: 300;
 }
@@ -438,7 +439,8 @@ footer p {
     max-width: 900px;
     margin: 0 auto;
     color: black; /* Set default text color */
-    padding-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -636,16 +638,28 @@ iframe[src*="rsvpify"] {
 }
 
 .centered-paragraph {
-    display: block; /* Enables flexbox for the container */
+    display: flex; /* Enables flexbox for the container */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
     text-align: center; /* Ensures text is centered inside the container */
-    margin: 0 auto; /* Removes default margin */
+    margin: 0 auto 65px auto; /* Removes default margin */
     color: black; /* Sets text color */
     font-size: 18px; /* Adjust font size as needed */
     line-height: 1.5; /* Adjust line height for readability */
-    padding-bottom: 65px;
-    width: 70%;
+}
+
+.centered-paragraph p {
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Ensures text is centered inside the container */
+    width: fit-content;
+    max-width: 75%;
+    text-align: center; 
+    color: black; 
+    font-size: 16px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0px 5px 0px 5px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
 }
 
 .countdown-container {
