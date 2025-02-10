@@ -204,6 +204,20 @@ body {
     body.alt {
         background-image: none !important;
     }
+
+    .bucket {
+        padding-bottom: 60px !important;
+    }
+    .rowstay {
+        flex-direction: column; /* Stack elements in a column */
+        align-items: center; /* Center items */
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+
+    /* Swap the order of .itemstay elements in the second .rowstay */
+    .bucket .rowstay:nth-of-type(2) .itemstay:nth-child(1) { order: 2; } /* Move first to second */
+    .bucket .rowstay:nth-of-type(2) .itemstay:nth-child(2) { order: 1; } /* Move second to first */
 }
 
 h2 {
