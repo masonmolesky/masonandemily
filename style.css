@@ -481,6 +481,15 @@ footer p {
     border-radius: 8px;
 }
 
+.itemdayof {
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* Each question-answer row */
 .row {
     display: grid;
