@@ -215,6 +215,10 @@ body {
         margin-bottom: 10px !important;
     }
 
+    .wedding-party .party-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
     /* Swap the order of .itemstay elements in the second .rowstay */
     .bucket .rowstay:nth-of-type(2) .itemstay:nth-child(1) { order: 2; } /* Move first to second */
     .bucket .rowstay:nth-of-type(2) .itemstay:nth-child(2) { order: 1; } /* Move second to first */
@@ -466,7 +470,7 @@ footer p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -488,6 +492,43 @@ footer p {
     flex-wrap: wrap;
     margin-bottom: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wedding-party .party-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.wedding-party .party-member {
+  text-align: center;
+}
+
+.wedding-party .party-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.wedding-party .party-member h3 {
+    font-family: 'Georgia', cursive;
+    font-size: 18px;
+    color: #050404;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    color: black;
+}
+
+  /* Hover effect for party-member */
+.wedding-party .party-member:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.wedding-party .party-member:hover h3 {
+    color: green; /* A nice dark shade as contrast, or pick any other */
 }
 
 /* Each question-answer row */
