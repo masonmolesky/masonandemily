@@ -479,7 +479,6 @@ footer p {
     margin: 10px;
     text-align: center;
     list-style-type: none;
-
 }
 
 .itemstay img {
@@ -494,6 +493,11 @@ footer p {
     flex-wrap: wrap;
     margin-bottom: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+}
+
+h2[id] {
+  scroll-margin-top: 90px; /* adjust this value to match your fixed header height */
 }
 
 .wedding-party .party-grid {
@@ -541,6 +545,8 @@ footer p {
     gap: 15px; /* Space between question and answer */
     position: relative; /* Required for the pseudo-element */
 }
+
+.row li {}
 
 /* Divider between question and answer */
 .row::before {
